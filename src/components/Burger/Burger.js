@@ -1,8 +1,8 @@
 import React from 'react';
+
 import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 const Burger = (props) => {
-
     let ingredients = Object.keys(props.ingredients)
             .map(key => [...Array(props.ingredients[key])]
             .map((_, index) => <BurgerIngredient key={key+index} type={key} />))
